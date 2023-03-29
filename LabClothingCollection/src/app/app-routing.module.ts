@@ -5,6 +5,7 @@ import { FullComponent } from './layouts/full/full.component';
 import { HomeComponent } from './pages/home/home.component';
 import { LoginComponent } from './pages/login/login.component';
 import { ResetPasswordComponent } from './pages/reset-password/reset-password.component';
+import { SignupComponent } from './pages/signup/signup.component';
 
 const routes: Routes = [
   // {
@@ -23,17 +24,25 @@ const routes: Routes = [
         redirectTo: 'login',
         pathMatch: 'full',
       },
-      {
-        path: 'reset',
-        component: ResetPasswordComponent,
-      },
+
       {
         path: 'login',
         component: LoginComponent,
       },
+      
+      {
+        path: 'reset',
+        component: ResetPasswordComponent,
+      },
+  
       {
         path: 'home',
         component: HomeComponent,
+      },
+
+      {
+        path: 'signup',
+        component: SignupComponent,
       },
     ]
   }

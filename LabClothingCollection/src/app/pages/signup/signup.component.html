@@ -1,1 +1,34 @@
-<p>signup works!</p>
+<main [formGroup]="signupForm">
+  <section>
+    <img id="logo" src="../../../assets/audaces.png" alt="logo">
+    <div class="form-signup">
+
+      <h4>Sign Up</h4>
+      <p>Insira seus dados para criar uma conta</p>
+      <div class="container">
+
+        <input class="form-control" formControlName="userName" type="text" placeholder="Nome">
+        <input class="mt-2 form-control" formControlName="userCompany" type="text" placeholder="Empresa">
+        <input class="mt-2 form-control" formControlName="userCnpj" type="text" placeholder="CNPJ">
+        <input class="mt-2 form-control" formControlName="userEmail" type="text" placeholder="Informe seu e-mail">
+
+        <div class="row mt-2">
+          <div class="col-6" id="div-senha">
+            <input class="me-2 form-control" formControlName="userPassword" type="password" placeholder="Senha">
+          </div>
+          <div class="col-6" id="div-confirmar-senha">
+            <input class="form-control" style="padding-left: 6px;" formControlName="userConfirmpassword" type="password"
+              placeholder="Confirmar senha">
+          </div>
+        </div>
+
+        <button class="btn btn-primary mt-4 col-12" [disabled]="!signupForm.valid" (click)="onSignup()">Criar
+          Conta</button>
+      </div>
+    </div>
+    <div class="operacoes mt-2">
+      <p>Já possui uma conta? <a href="#" routerLink="/login" routerLinkActive="active">Realizar login</a></p>
+
+    </div>
+  </section>
+</main>

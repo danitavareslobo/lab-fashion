@@ -18,6 +18,7 @@ import { EditModellsComponent } from './pages/edit-modells/edit-modells.componen
 import { FullComponent } from './layouts/full/full.component';
 import { ContentComponent } from './layouts/content/content.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { SignupComponent } from './pages/signup/signup.component';
 
 
 @NgModule({
@@ -29,6 +30,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     HomeComponent,
     CollectionsComponent,
     ResetPasswordComponent,
+    SignupComponent,
     ModellsComponent,
     RegisterCollectionComponent,
     EditCollectionComponent,

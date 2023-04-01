@@ -1,6 +1,6 @@
 <main [formGroup]="loginForm">
   <section>
-    <img id="logo" src="../../../assets/audaces.png" alt="logo">
+    <img id="logo" src="../../../assets/audaces.svg" alt="logo">
       <div class="form-login">
       
       <h4>Sign In</h4>
@@ -9,7 +9,7 @@
       <br>
       <input class="form-control" formControlName="userPassword" type= "password" placeholder="Informe sua senha">
       <br><br>
-      <button class="btn btn-primary" [disabled]="!loginForm.valid" (click)="onLogar()">Entrar</button>
+      <button class="btn btn-primary right-100" [disabled]="!loginForm.valid" (click)="onLogar()">Entrar</button>
 
     </div>
     <br>

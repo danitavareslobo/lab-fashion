@@ -1,0 +1,31 @@
+<nav class="navbar navbar-expand-lg bg-body shadow-sm p-2 mb-5 bg-white">
+  <div class="container-fluid">
+
+    <button class="navbar-toggler text-decoration-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+    aria-controls="navbarSupportedContent"  aria-expanded="false" aria-label="Toggle navigation" >
+
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mb-2 mb-lg-0">
+        <li class="nav-item dropdown">
+          <img src="/assets/sino.svg" alt="" width="20">
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <img src="/assets/Rectangle.svg" alt="" width="30" height="24">
+          </a>
+          <ul class="dropdown-menu dropdown-menu-end">
+            <li><a class="dropdown-item" href="#"> <img src="/assets/perfil.svg" alt=""> Conta</a></li>
+            <li> <hr class="dropdown-divider"> </li>
+            <li><a class="dropdown-item" href="#"><img src="/assets/engrenagem.svg" alt=""> Configurações</a>
+            </li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a (click)="logout()" routerLinkActive="active" class="dropdown-item" href="#"><img
+                  src="/assets/sair.svg" alt=""> Sair</a></li>
+          </ul>
+        </li>
+
+      </ul>
+    </div>
+  </div>
+</nav>

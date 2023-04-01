@@ -1,0 +1,23 @@
+* {
+  background: white;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  color: #2B2C33;
+  line-height: 14px;
+}
+
+  .dropdown-menu,
+  .dropdown-divider {
+    border: 1px solid #E6E7EB !important;
+  }
+
+  .collapse {
+    display: flex;
+    justify-content: flex-end
+  }
+
+  .nav-item {
+    display: flex;
+  }

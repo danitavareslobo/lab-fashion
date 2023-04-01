@@ -1,0 +1,12 @@
+.full-component {
+  height: 100%;
+  display: flex;
+
+  .sidenav {
+    min-width: 250px;
+  }
+
+  .full-content {
+    width: 100%;
+  }
+}

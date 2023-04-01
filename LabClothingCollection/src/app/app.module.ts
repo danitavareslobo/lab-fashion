@@ -10,16 +10,18 @@ import { NotFoundComponent } from './pages/not-found/not-found.component';
 import { HomeComponent } from './pages/home/home.component';
 import { CollectionsComponent } from './pages/collections/collections.component';
 import { ResetPasswordComponent } from './pages/reset-password/reset-password.component';
-import { ModellsComponent } from './pages/modells/modells.component';
 import { RegisterCollectionComponent } from './pages/register-collection/register-collection.component';
 import { EditCollectionComponent } from './pages/edit-collection/edit-collection.component';
-import { RegisterModellsComponent } from './pages/register-modells/register-modells.component';
-import { EditModellsComponent } from './pages/edit-modells/edit-modells.component';
 import { FullComponent } from './layouts/full/full.component';
 import { ContentComponent } from './layouts/content/content.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { SignupComponent } from './pages/signup/signup.component';
-
+import { MenuComponent } from './components/menu/menu.component';
+import { HeaderComponent } from './components/header/header.component';
+import { CardsComponent } from './components/cards/cards.component';
+import { ModelsComponent } from './pages/models/models.component';
+import { HelpComponent } from './pages/help/help.component';
+import { ComentsComponent } from './pages/coments/coments.component';
 
 @NgModule({
   declarations: [
@@ -31,13 +33,16 @@ import { SignupComponent } from './pages/signup/signup.component';
     CollectionsComponent,
     ResetPasswordComponent,
     SignupComponent,
-    ModellsComponent,
     RegisterCollectionComponent,
     EditCollectionComponent,
-    RegisterModellsComponent,
-    EditModellsComponent,
     FullComponent,
-    ContentComponent,   
+    ContentComponent,
+    MenuComponent,
+    HeaderComponent,
+    CardsComponent,
+    ModelsComponent,
+    HelpComponent,
+    ComentsComponent,   
   ],
   imports: [
     BrowserModule,
@@ -45,7 +50,7 @@ import { SignupComponent } from './pages/signup/signup.component';
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
-    NgbModule
+    NgbModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

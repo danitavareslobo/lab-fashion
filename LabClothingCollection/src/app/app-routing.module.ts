@@ -6,45 +6,63 @@ import { HomeComponent } from './pages/home/home.component';
 import { LoginComponent } from './pages/login/login.component';
 import { ResetPasswordComponent } from './pages/reset-password/reset-password.component';
 import { SignupComponent } from './pages/signup/signup.component';
+import { HelpComponent } from './pages/help/help.component';
+import { ComentsComponent } from './pages/coments/coments.component';
+import { CollectionsComponent } from './pages/collections/collections.component';
+import { ModelsComponent } from './pages/models/models.component';
 
 const routes: Routes = [
-  // {
-  //   path: '',
-  //   component: FullComponent,
-  //   children: [
-
-  //   ]
-  // },
   {
     path: '',
-    component: ContentComponent,
+    redirectTo: 'login',
+    pathMatch: 'full',
+  },
+  {
+    path: 'login',
+    component: LoginComponent,
+  },  
+  {
+    path: 'reset',
+    component: ResetPasswordComponent,
+  },
+  {
+    path: 'signup',
+    component: SignupComponent,
+  },
+  {
+    path: 'private',
+    component: FullComponent,
     children: [
       {
         path: '',
-        redirectTo: 'login',
+        redirectTo: 'home',
         pathMatch: 'full',
       },
-
-      {
-        path: 'login',
-        component: LoginComponent,
-      },
-      
-      {
-        path: 'reset',
-        component: ResetPasswordComponent,
-      },
-  
       {
         path: 'home',
         component: HomeComponent,
       },
-
       {
-        path: 'signup',
-        component: SignupComponent,
+        path: 'collections',
+        component: CollectionsComponent,
       },
+      {
+        path: 'models',
+        component: ModelsComponent,
+      },
+      {
+        path: 'help',
+        component: HelpComponent,
+      },
+      {
+        path: 'coments',
+        component: ComentsComponent,
+      }
     ]
+  },
+  {
+    path: '',
+    component: ContentComponent,    
   }
 ];
 

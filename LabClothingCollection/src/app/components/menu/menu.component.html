@@ -1,0 +1,29 @@
+<div class="d-flex flex-column p-4 bg-body-white shadow-sm" style="width: 250px; height: 100%;">
+
+  <img src="../../../assets/audaces-logo.svg" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto bi pe-none me-2"
+    alt="">
+
+  <p>MENU</p>
+
+  <ul class="nav nav-pills flex-column mb-auto">
+    <li>
+      <a routerLink="/private/home" class="nav-link" [ngClass]="bindingRouters('private/home')">Dashboard</a><br>
+    </li>
+    <li>
+      <a routerLink="/private/collections" class="nav-link" class="nav-link"
+        [ngClass]="bindingRouters('private/collections')">Coleções</a><br>
+    </li>
+    <li>
+      <a routerLink="/private/models" class="nav-link" class="nav-link"
+        [ngClass]="bindingRouters('private/models')">Modelos</a><br>
+    </li>
+    <li>
+      <a routerLink="/private/help" class="nav-link" class="nav-link"
+        [ngClass]="bindingRouters('private/help')">Obter
+        Ajuda</a><br>
+    </li>
+    <li>
+      <a routerLink="/private/coments" class="nav-link" class="nav-link"
+        [ngClass]="bindingRouters('private/coments')">Comentários</a>
+    </li>
+  </ul>

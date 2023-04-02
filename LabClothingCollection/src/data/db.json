@@ -1,0 +1,96 @@
+{
+  "modelos": [
+    {
+      "id": 1,
+      "nome": "Modelo 1",
+	  "tipoModelo": "",
+	  "colecao": 1,
+	  "responsável": "Daniele Tavares",
+	  "possuiBordado": false,
+	  "possuiEstampa": false      
+    },
+    {
+      "id": 2,
+      "nome": "Modelo 2",
+	  "tipoModelo": "",
+	  "colecao": 1,
+	  "responsável": "Daniele Tavares",
+	  "possuiBordado": false,
+	  "possuiEstampa": false
+    },
+    {
+      "id": 3,
+      "nome": "Modelo 3",
+	  "tipoModelo": "",
+	  "colecao": 1,
+	  "responsável": "Daniele Tavares",
+	  "possuiBordado": false,
+	  "possuiEstampa": false
+    },
+    {
+      "id": 4,
+      "nome": "Modelo 4",
+	  "tipoModelo": "",
+	  "colecao": 1,
+	  "responsável": "Daniele Tavares",
+	  "possuiBordado": false,
+	  "possuiEstampa": true
+    },
+    {
+      "id": 5,
+      "nome": "Modelo 5",
+	  "tipoModelo": "",
+	  "colecao": 1,
+	  "responsável": "Daniele Tavares",
+	  "possuiBordado": true,
+	  "possuiEstampa": false
+    }
+  ],
+  "colecoes": [
+    {
+      "id": 1,
+      "nome": "Coleção 1",
+	  "responsável": "Daniele Tavares",
+	  "estacao": "Inverno",
+	  "marca": "Audaces",
+	  "orcamento": 9500.00,
+	  "anoLancamento": 2025
+    },
+    {
+      "id": 2,
+      "nome": "Coleção 2",
+	  "responsável": "Daniele Tavares",
+	  "estacao": "Inverno",
+	  "marca": "Audaces",
+	  "orcamento": 900.00,
+	  "anoLancamento": 2025
+    },
+    {
+      "id": 3,
+      "nome": "Coleção 3",
+	  "responsável": "Daniele Tavares",
+	  "estacao": "Inverno",
+	  "marca": "Audaces",
+	  "orcamento": 1500.00,
+	  "anoLancamento": 2025
+    },
+    {
+      "id": 4,
+      "nome": "Coleção 4",
+	  "responsável": "Daniele Tavares",
+	  "estacao": "Versão",
+	  "marca": "Audaces",
+	  "orcamento": 500.00,
+	  "anoLancamento": 2025
+    },
+    {
+      "id": 5,
+      "nome": "Coleção 5",
+	  "responsável": "Daniele Tavares",
+	  "estacao": "Versão",
+	  "marca": "Audaces",
+	  "orcamento": 2500.00,
+	  "anoLancamento": 2025
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+// .container {
+//   background-color: #FFF;
+//   position: absolute;
+//   width: 75%;
+//   top: 44%;
+//   left: 22%;
+//   padding: 20px;
+  
+// }
+
+.card {
+  background-color: #FFF;
+  display: flex;
+  flex-direction: row;
+  min-height: 210px;
+  justify-content: space-between;
+  border-radius: 16px;
+  padding: 20px 10px 5px 10px;
+}
+
+h5 {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  color: #595959;
+  
+}
+
+.card-total {
+  font-family: 'Inter';
+  font-style: normal; 
+  font-weight: 600;
+  font-size: 20px; 
+  color: #2C2C2C;
+}
+
+

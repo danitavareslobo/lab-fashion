@@ -1,7 +1,17 @@
-<div class="card" style="width: 18rem;">
+<div class="card">
   <div class="card-body">
-    <h5 class="card-collections">Coleções</h5>
-    <h5 class="card-total">25</h5>
+    <h5 class="card-title">{{ titulo }}</h5>
     
+    <br>
+      
+    <h5 class="card-total d-flex align-self-center">{{ valor }}</h5> 
+  
+    <div class="d-flex align-items-end flex-column" *ngIf="info">
+      <h6 class="card-total" style="color: #03ba46;
+      font-family: 'Inter'; font-style: normal; font-weight: 600;
+      font-size: 16px;"> <img src="/assets/setav.svg" alt="" width="30%" style="color: #03ba46;">  25%</h6>
+      <p style="font-family: 'Inter'; font-style: normal;
+      font-weight: 500; font-size: 16px; color: #B4B6C1;">Comparado com 02/23</p>
+    </div>
   </div>
 </div>

@@ -1,0 +1,91 @@
+<h5>Criar Modelo</h5>
+
+<div class="table">
+  <form [formGroup]="modelForm">
+    <div class="container mt-5">
+      <div class="row">
+        <input type="hidden" formControlName="id" name="id">
+        <div class="col-6" id="div-name">
+          <input class="me-2 form-control input-model" formControlName="nome" type="text" placeholder="Nome do Modelo"
+            required>
+        </div>
+        <div class="col-6" id="div-type">
+          <select class="me-2 form-select select-model" formControlName="tipoModelo" aria-label="Default select example"
+            required>
+            <option value="" selected>Tipo do Modelo</option>
+            <option value="Bermuda">Bermuda</option>
+            <option value="Bíquini">Bíquini</option>
+            <option value="Bolsa">Bolsa</option>
+            <option value="Boné">Boné</option>
+            <option value="Calça">Calça</option>
+            <option value="Calçados">Calçados</option>
+            <option value="Camisa">Camisa</option>
+            <option value="Chapéu">Chapéu</option>
+            <option value="Saia">Saia</option>
+          </select>
+        </div>
+      </div>
+      <br>
+      <div class="row">
+        <div class="col-6" id="div-colecao">
+          <select class="me-2 form-select select-model" formControlName="colecao" aria-label="Default select example"
+            required>
+            <option value="" selected>Selecionar coleção</option>
+            <option *ngFor="let collection of collections" [value]="collection.nome">{{collection.nome}}</option>
+          </select>
+        </div>
+
+        <div class="col-6" id="div-resp">
+          <input class="form-control input-model" formControlName="responsavel" type="text"
+            placeholder="Responsável pelo modelo" required>
+        </div>
+      </div>
+      <br>
+      <div class="row">
+        <div class="col-6" id="div-bord">
+          <label class="form-check-label" for="bordadoRadio">
+            Possui bordado?
+          </label>
+          <div class="form-check">
+            <input class="form-check-input" formControlName="possuiBordado" type="radio" [value]="true">
+            <label class="form-check-label" for="bordadoRadio">
+              Sim
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" formControlName="possuiBordado" [value]="false">
+            <label class="form-check-label" for="bordadoRadio">
+              Não
+            </label>
+          </div>
+        </div>
+        <div class="col-6" id="div-estamp">
+          <label class="form-check-label" for="estampaRadio">
+            Possui estampa?
+          </label>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" formControlName="possuiEstampa" [value]="true">
+            <label class="form-check-label" for="estampaRadio">
+              Sim
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" formControlName="possuiEstampa" [value]="false">
+            <label class="form-check-label" for="estampaRadio">
+              Não
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br><br><br><br>
+    <div class="container mt-5">
+      <div class="action-buttons row">
+        <div class="left-buttons offset-md-4 col-md-8">
+          <button type="button" (click)="onList()" class="btn btn-secondary btn-model">Cancelar</button>
+          <button type="button" (click)="onCreate()" class="btn btn-primary btn-model">Salvar</button>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>

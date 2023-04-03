@@ -1,4 +1,5 @@
 .full-component {
+  background-image: linear-gradient(10deg, #a0cef3, #F9F9F9);
   height: 100%;
   display: flex;
 
@@ -8,5 +9,7 @@
 
   .full-content {
     width: 100%;
+    height: 100%;
+    overflow-y: auto;
   }
 }

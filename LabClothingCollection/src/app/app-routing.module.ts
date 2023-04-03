@@ -10,12 +10,22 @@ import { HelpComponent } from './pages/help/help.component';
 import { ComentsComponent } from './pages/coments/coments.component';
 import { CollectionsComponent } from './pages/collections/collections.component';
 import { ModelsComponent } from './pages/models/models.component';
+import { CardsComponent } from './components/cards/cards.component';
+import { RegisterCollectionComponent } from './pages/collections/register-collection/register-collection.component';
+import { EditCollectionComponent } from './pages/collections/edit-collection/edit-collection.component';
+import { EditModelComponent } from './pages/models/edit-model/edit-model.component';
+import { RegisterModelComponent } from './pages/models/register-model/register-model.component';
+import { LoginGuard } from './guards/login/login.guard';
 
 const routes: Routes = [
   {
     path: '',
     redirectTo: 'login',
     pathMatch: 'full',
+  },
+  {
+    path: 'cards',
+    component: CardsComponent
   },
   {
     path: 'login',
@@ -32,6 +42,7 @@ const routes: Routes = [
   {
     path: 'private',
     component: FullComponent,
+    canActivate: [LoginGuard],
     children: [
       {
         path: '',
@@ -57,6 +68,22 @@ const routes: Routes = [
       {
         path: 'coments',
         component: ComentsComponent,
+      },
+      {
+        path: 'register-collection',
+        component: RegisterCollectionComponent,
+      },
+      {
+        path: 'edit-collection/:id',
+        component: EditCollectionComponent
+      },
+      {
+        path: 'edit-model/:id',
+        component: EditModelComponent
+      },
+      {
+        path: 'register-model',
+        component: RegisterModelComponent
       }
     ]
   },
@@ -64,7 +91,7 @@ const routes: Routes = [
     path: '',
     component: ContentComponent,    
   }
-];
+ ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

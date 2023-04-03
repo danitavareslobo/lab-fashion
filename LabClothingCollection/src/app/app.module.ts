@@ -10,8 +10,6 @@ import { NotFoundComponent } from './pages/not-found/not-found.component';
 import { HomeComponent } from './pages/home/home.component';
 import { CollectionsComponent } from './pages/collections/collections.component';
 import { ResetPasswordComponent } from './pages/reset-password/reset-password.component';
-import { RegisterCollectionComponent } from './pages/register-collection/register-collection.component';
-import { EditCollectionComponent } from './pages/edit-collection/edit-collection.component';
 import { FullComponent } from './layouts/full/full.component';
 import { ContentComponent } from './layouts/content/content.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
@@ -22,6 +20,11 @@ import { CardsComponent } from './components/cards/cards.component';
 import { ModelsComponent } from './pages/models/models.component';
 import { HelpComponent } from './pages/help/help.component';
 import { ComentsComponent } from './pages/coments/coments.component';
+import { RegisterCollectionComponent } from './pages/collections/register-collection/register-collection.component';
+import { EditCollectionComponent } from './pages/collections/edit-collection/edit-collection.component';
+import { EditModelComponent } from './pages/models/edit-model/edit-model.component';
+import { RegisterModelComponent } from './pages/models/register-model/register-model.component';
+import { LoginGuard } from './guards/login/login.guard';
 
 @NgModule({
   declarations: [
@@ -33,8 +36,6 @@ import { ComentsComponent } from './pages/coments/coments.component';
     CollectionsComponent,
     ResetPasswordComponent,
     SignupComponent,
-    RegisterCollectionComponent,
-    EditCollectionComponent,
     FullComponent,
     ContentComponent,
     MenuComponent,
@@ -42,7 +43,12 @@ import { ComentsComponent } from './pages/coments/coments.component';
     CardsComponent,
     ModelsComponent,
     HelpComponent,
-    ComentsComponent,   
+    ComentsComponent,
+    RegisterCollectionComponent,
+    EditCollectionComponent,
+    EditModelComponent,
+    RegisterModelComponent,
+    
   ],
   imports: [
     BrowserModule,
@@ -52,7 +58,7 @@ import { ComentsComponent } from './pages/coments/coments.component';
     ReactiveFormsModule,
     NgbModule,
   ],
-  providers: [],
+  providers: [LoginGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

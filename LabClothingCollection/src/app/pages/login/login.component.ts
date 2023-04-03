@@ -25,6 +25,8 @@ export class LoginComponent implements OnInit {
   }
 
   onLogar() {
+    localStorage.setItem("isLogged", "yes");
+    
     this._router.navigate(['/private/home']);
   }
 }

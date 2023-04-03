@@ -1,96 +1,109 @@
 {
   "modelos": [
     {
-      "id": 1,
       "nome": "Modelo 1",
-	  "tipoModelo": "",
-	  "colecao": 1,
-	  "responsável": "Daniele Tavares",
-	  "possuiBordado": false,
-	  "possuiEstampa": false      
+      "tipoModelo": "Bíquini",
+      "colecao": "Coleção 5",
+      "responsavel": "Daniele Tavares",
+      "possuiBordado": false,
+      "possuiEstampa": false,
+      "id": 1
     },
     {
-      "id": 2,
       "nome": "Modelo 2",
-	  "tipoModelo": "",
-	  "colecao": 1,
-	  "responsável": "Daniele Tavares",
-	  "possuiBordado": false,
-	  "possuiEstampa": false
+      "tipoModelo": "Saia",
+      "colecao": "Coleção 3",
+      "responsavel": "Daniele Tavares",
+      "possuiBordado": false,
+      "possuiEstampa": false,
+      "id": 2
     },
     {
-      "id": 3,
       "nome": "Modelo 3",
-	  "tipoModelo": "",
-	  "colecao": 1,
-	  "responsável": "Daniele Tavares",
-	  "possuiBordado": false,
-	  "possuiEstampa": false
+      "tipoModelo": "Bermuda",
+      "colecao": "Coleção 4",
+      "responsavel": "Daniele Tavares",
+      "possuiBordado": false,
+      "possuiEstampa": false,
+      "id": 3
     },
     {
-      "id": 4,
       "nome": "Modelo 4",
-	  "tipoModelo": "",
-	  "colecao": 1,
-	  "responsável": "Daniele Tavares",
-	  "possuiBordado": false,
-	  "possuiEstampa": true
+      "tipoModelo": "Calçados",
+      "colecao": "Coleção 2",
+      "responsavel": "Daniele Tavares",
+      "possuiBordado": false,
+      "possuiEstampa": false,
+      "id": 4
     },
     {
-      "id": 5,
       "nome": "Modelo 5",
-	  "tipoModelo": "",
-	  "colecao": 1,
-	  "responsável": "Daniele Tavares",
-	  "possuiBordado": true,
-	  "possuiEstampa": false
+      "tipoModelo": "Camisa",
+      "colecao": "Coleção 3",
+      "responsavel": "Daniele Tavares",
+      "possuiBordado": true,
+      "possuiEstampa": true,
+      "id": 5
+    },
+    {
+      "nome": "Modelo da Daniele",
+      "tipoModelo": "Bolsa",
+      "colecao": "Coleção 2",
+      "responsavel": "Diego",
+      "possuiBordado": false,
+      "possuiEstampa": false,
+      "id": 6
     }
   ],
   "colecoes": [
     {
-      "id": 1,
-      "nome": "Coleção 1",
-	  "responsável": "Daniele Tavares",
-	  "estacao": "Inverno",
-	  "marca": "Audaces",
-	  "orcamento": 9500.00,
-	  "anoLancamento": 2025
-    },
-    {
       "id": 2,
       "nome": "Coleção 2",
-	  "responsável": "Daniele Tavares",
-	  "estacao": "Inverno",
-	  "marca": "Audaces",
-	  "orcamento": 900.00,
-	  "anoLancamento": 2025
+      "responsavel": "Daniele Tavares",
+      "estacao": "Inverno",
+      "marca": "Audaces",
+      "modelos": 1,
+      "orcamento": 900,
+      "anoLancamento": 2025
     },
     {
       "id": 3,
       "nome": "Coleção 3",
-	  "responsável": "Daniele Tavares",
-	  "estacao": "Inverno",
-	  "marca": "Audaces",
-	  "orcamento": 1500.00,
-	  "anoLancamento": 2025
+      "responsavel": "Daniele Tavares",
+      "estacao": "Inverno",
+      "marca": "Audaces",
+      "modelos": 2,
+      "orcamento": 1500,
+      "anoLancamento": 2025
     },
     {
       "id": 4,
       "nome": "Coleção 4",
-	  "responsável": "Daniele Tavares",
-	  "estacao": "Versão",
-	  "marca": "Audaces",
-	  "orcamento": 500.00,
-	  "anoLancamento": 2025
+      "responsavel": "Daniele Tavares",
+      "estacao": "Versão",
+      "marca": "Audaces",
+      "modelos": 2,
+      "orcamento": 500,
+      "anoLancamento": 2025
     },
     {
-      "id": 5,
       "nome": "Coleção 5",
-	  "responsável": "Daniele Tavares",
-	  "estacao": "Versão",
-	  "marca": "Audaces",
-	  "orcamento": 2500.00,
-	  "anoLancamento": 2025
+      "responsavel": "Dani",
+      "estacao": "Versão 12",
+      "marca": "Audaces",
+      "modelos": 1,
+      "orcamento": 2500,
+      "anoLancamento": 2025,
+      "id": 5
+    },
+    {
+      "nome": "Daniele Verão 2",
+      "responsavel": "Dani",
+      "estacao": "Verão",
+      "marca": "Tavares",
+      "orcamento": "50000",
+      "anoLancamento": "2026",
+      "id": 6
     }
   ]
 }

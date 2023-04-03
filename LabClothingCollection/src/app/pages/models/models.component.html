@@ -1,1 +1,37 @@
-<p>models works!</p>
+<main>
+  <section>
+    <div class="row">
+      <div class="div-header col-md-4">
+        <span>Modelos</span>
+      </div>
+
+      <div class="col-md-4 offset-md-4 text-end">
+        <button class="btn btn-primary" (click)="onCreateModel()"> Criar Modelo </button>
+      </div>
+    </div>
+
+
+    <div class="table-home">
+      <div class="d-flex justify-content-around">
+        <table class="table table-hover " style="color: #595959;">
+          <thead>
+            <tr>
+              <th scope="col">ModeloID</th>
+              <th scope="col">Nome do Modelo</th>
+              <th scope="col">Responsável</th>
+              <th scope="col">Coleção</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="edit-model" *ngFor="let model of models" (click)="onEdit(model)">
+              <td scope="row">{{ model['id'] }}</td>
+              <td>{{ model['nome'] }}</td>
+              <td>{{ model['responsavel'] }}</td>
+              <td>{{ model['colecao'] }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+</main>

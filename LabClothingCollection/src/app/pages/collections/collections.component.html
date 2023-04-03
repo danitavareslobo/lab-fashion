@@ -1,1 +1,39 @@
-<p>collections works!</p>
+<main>
+  <section>
+    <div class="row">
+      <div class="div-header col-md-4">
+        <span>Coleções</span>
+      </div>
+
+      <div class="col-md-4 offset-md-4 text-end">
+        <button class="btn btn-primary" (click)="onCreate()"> Criar Coleção </button>
+      </div>
+    </div>
+
+
+    <div class="table-home">
+      <div class="d-flex justify-content-around">
+        <table class="table table-hover " style="color: #595959;">
+          <thead>
+            <tr>
+              <th scope="col">Coleção</th>
+              <th scope="col">Responsável</th>
+              <th scope="col">Estação-Lançamento</th>
+              <th scope="col">Modelos</th>
+              <th scope="col">Orçamento</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="edit-collection" *ngFor="let collection of collections" (click)="onEdit(collection)">
+              <td scope="row">{{ collection['id'] }}</td>
+              <td>{{ collection['responsavel'] }}</td>
+              <td>{{ collection['estacao'] }}</td>
+              <td>{{ collection['modelos'] || 0 }}</td>
+              <td>{{ collection['orcamento'] }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+</main>

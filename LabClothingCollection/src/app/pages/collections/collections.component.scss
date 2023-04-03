@@ -1,0 +1,45 @@
+span {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 22px;
+  color: #2C2C2C;
+}
+
+button {
+  font-size: 14px;
+  padding: 12px;
+  width: 70%;
+}
+
+li {
+  list-style: none;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 95%;
+  margin-left: 3%;
+}
+
+td {
+  color: #9395A3
+}
+
+.table-home {
+  background-color: #FFF;
+  position: absolute;
+  width: 75%;
+  top: 35%;
+  bottom: 10%;
+  left: 22.4%;
+  padding: 20px;
+  border-radius: 15px;
+}
+
+.edit-collection {
+  cursor: pointer;
+}

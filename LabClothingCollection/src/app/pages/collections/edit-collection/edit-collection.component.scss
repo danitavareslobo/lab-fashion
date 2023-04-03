@@ -1,0 +1,59 @@
+h5 {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  padding-left: 5%;
+  margin-top: -3%;
+}
+
+.table {
+  background-color: #FFF;
+  position: absolute;
+  width: 75%;
+  top: 20%;
+  bottom: 5%;
+  left: 22.4%;
+  padding: 20px;
+  border-radius: 15px;
+}
+
+
+
+input {
+  color: #B4B6C1;
+  font-size: 12px;
+  width: 75%;
+}
+
+::placeholder {
+  color: #B4B6C1;
+}
+
+.action-buttons {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+
+  .right-buttons {
+    margin-left: 0;
+
+    button {
+      min-width: 200px;
+    }
+  }
+
+  .left-buttons {
+    margin-left: auto;
+
+    button {
+      min-width: 200px;
+    }
+  }
+
+  .left-buttons:first-child {
+    button{
+      margin-right: 50px;
+    }
+  }
+}

@@ -1,0 +1,52 @@
+<h5>Editar Coleção</h5>
+
+<div class="table">
+  <form [formGroup]="collectionForm">
+    <div class="row mt-2" style="padding-left: 8%;">
+      <input type="hidden" formControlName="id" name="id">
+      <div class="col-6" id="div-name">
+        <input class="me-2 form-control" type="text" formControlName="nome" placeholder="Nome da Coleção" id="nome"
+          required>
+      </div>
+      <div class="col-6" id="div-resp">
+        <input class="form-control" type="text" placeholder="Responsável pela coleção" formControlName="responsavel"
+          required>
+      </div>
+      <br><br><br>
+
+      <div class="col-6" id="div-estacao">
+        <input class="me-2 form-control" type="text" placeholder="Para qual estação?" formControlName="estacao"
+          required>
+      </div>
+      <div class="col-6" id="div-marca">
+        <input class="form-control" s type="text" placeholder="Para qual marca você está criando?"
+          formControlName="marca" required>
+      </div>
+      <br><br><br>
+
+      <div class="col-6" id="div-orcamento">
+        <input class="me-2 form-control" type="text" placeholder="Qual é o orçamento desta coleção?"
+          formControlName="orcamento" required>
+      </div>
+      <div class="col-6" id="div-ano">
+        <input class="form-control" type="text" placeholder="Ano de Lançamento" formControlName="anoLancamento"
+          required>
+      </div>
+      <br><br><br>
+
+      <img width="150px" height="180px" src="/assets/clothes.svg" alt="" style="margin-left: -5%;">
+
+      <div class="container mt-5">
+        <div class="action-buttons row">
+          <div class="right-buttons col-3">
+            <button type="button" (click)="onDelete(this)" class="btn btn-danger btn-sm">Excluir</button>
+          </div>
+          <div class="left-buttons offset-3 col-6">
+            <button type="button" (click)="onBack()" class="btn btn-secondary btn-sm">Cancelar</button>
+            <button type="button" (click)="onEdit()" class="btn btn-primary btn-sm">Salvar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>

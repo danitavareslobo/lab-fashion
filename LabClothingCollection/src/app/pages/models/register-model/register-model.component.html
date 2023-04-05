@@ -1,8 +1,8 @@
 <h5>Criar Modelo</h5>
 
-<div class="table">
+<div class="table mt-2">
   <form [formGroup]="modelForm">
-    <div class="container mt-5">
+    <div class="container mt-3">
       <div class="row">
         <input type="hidden" formControlName="id" name="id">
         <div class="col-6" id="div-name">
@@ -42,7 +42,7 @@
       </div>
       <br>
       <div class="row">
-        <div class="col-6" id="div-bord">
+        <div class="col-6" id="div-bord" style="padding-left: 4%;">
           <label class="form-check-label" for="bordadoRadio">
             Possui bordado?
           </label>
@@ -59,7 +59,7 @@
             </label>
           </div>
         </div>
-        <div class="col-6" id="div-estamp">
+        <div class="col-6" id="div-estamp" style="padding-left: 4%;">
           <label class="form-check-label" for="estampaRadio">
             Possui estampa?
           </label>
@@ -78,10 +78,10 @@
         </div>
       </div>
     </div>
-    <br><br><br><br>
+   
     <div class="container mt-5">
       <div class="action-buttons row">
-        <div class="left-buttons offset-md-4 col-md-8">
+        <div class="left-buttons offset-6 col-6">
           <button type="button" (click)="onList()" class="btn btn-secondary btn-model">Cancelar</button>
           <button type="button" (click)="onCreate()" class="btn btn-primary btn-model">Salvar</button>
         </div>

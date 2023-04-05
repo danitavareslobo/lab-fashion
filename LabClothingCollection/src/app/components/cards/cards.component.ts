@@ -11,8 +11,8 @@ export class CardsComponent implements OnInit {
   @Input() public titulo!: string;
   @Input() public valor!: number;
   @Input() public info: boolean = false;
+  @Input() public realMoney: boolean = false;
 
   ngOnInit(): void {
-    throw new Error('Method not implemented.');
   }
 }

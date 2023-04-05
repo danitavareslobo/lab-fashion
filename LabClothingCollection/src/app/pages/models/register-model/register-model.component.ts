@@ -1,7 +1,9 @@
-import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
+import { CollectionServicesService } from 'src/app/services/collection-services.service';
+import { ModelServicesService } from 'src/app/services/model-services.service';
 
 @Component({
   selector: 'app-register-model',
@@ -21,25 +23,19 @@ export class RegisterModelComponent implements OnInit{
       possuiEstampa: new FormControl("", [Validators.required, Validators.minLength(4)])
     });
 
-  constructor(private _api: HttpClient,
-                private _router: Router) { }
+  constructor(private _service: ModelServicesService,
+              private _serviceCollection: CollectionServicesService,
+              private _toast: ToastrService,
+              private _router: Router) { }
 
   ngOnInit(): void {
-    this._api.get("http://localhost:3000/colecoes/").subscribe((response: any) => {
+    this._serviceCollection.getCollections().then((response: any) => {
       this.collections = response;
     });
   }
 
   onCreate(){
-    this._api.post<any>("http://localhost:3000/modelos/", {
-          nome: this.modelForm.get("nome")?.value,
-          tipoModelo: this.modelForm.get("tipoModelo")?.value,
-          colecao: this.modelForm.get("colecao")?.value,
-          responsavel: this.modelForm.get("responsavel")?.value,
-          possuiBordado: this.modelForm.get("possuiBordado")?.value,
-          possuiEstampa: this.modelForm.get("possuiBordado")?.value
-        }).subscribe(data => console.log("retorno", data));
-
+    this._service.createModel(this.modelForm.value).then((response) => this._toast.info("Modelo criado!"));
      this._router.navigate(['/private/models']);
   }
 

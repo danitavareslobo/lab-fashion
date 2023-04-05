@@ -1,52 +1,84 @@
 <h5>Editar Coleção</h5>
 
 <div class="table">
-  <form [formGroup]="collectionForm">
-    <div class="row mt-2" style="padding-left: 8%;">
-      <input type="hidden" formControlName="id" name="id">
-      <div class="col-6" id="div-name">
-        <input class="me-2 form-control" type="text" formControlName="nome" placeholder="Nome da Coleção" id="nome"
-          required>
-      </div>
-      <div class="col-6" id="div-resp">
-        <input class="form-control" type="text" placeholder="Responsável pela coleção" formControlName="responsavel"
-          required>
-      </div>
-      <br><br><br>
 
-      <div class="col-6" id="div-estacao">
-        <input class="me-2 form-control" type="text" placeholder="Para qual estação?" formControlName="estacao"
-          required>
+  <div class="container mt-1">
+    <form class="row" [formGroup]="collectionForm">
+      <div class="row">
+        <div class="col-6" id="div-name">
+          <input class="input-collection me-2 form-control" formControlName="nome" type="text"
+            placeholder="Nome da Coleção" required>
+        </div>
+        <div class="col-6" id="div-resp">
+          <input class="form-control" type="text" formControlName="responsavel" placeholder="Responsável pela coleção"
+            required>
+        </div>
       </div>
-      <div class="col-6" id="div-marca">
-        <input class="form-control" s type="text" placeholder="Para qual marca você está criando?"
-          formControlName="marca" required>
-      </div>
-      <br><br><br>
 
-      <div class="col-6" id="div-orcamento">
-        <input class="me-2 form-control" type="text" placeholder="Qual é o orçamento desta coleção?"
-          formControlName="orcamento" required>
+      <div class="row">
+        <div class="col-6" id="div-estacao">
+          <input class="me-2 form-control" formControlName="estacao" type="text" placeholder="Para qual estação?"
+            required>
+        </div>
+        <div class="col-6" id="div-marca">
+          <input class="form-control" formControlName="marca" type="text"
+            placeholder="Para qual marca você está criando?" required>
+        </div>
       </div>
-      <div class="col-6" id="div-ano">
-        <input class="form-control" type="text" placeholder="Ano de Lançamento" formControlName="anoLancamento"
-          required>
+
+      <div class="row">
+        <div class="col-6" id="div-orcamento">
+          <input class="me-2 form-control" formControlName="orcamento" type="text"
+            placeholder="Qual é o orçamento desta coleção?" required>
+        </div>
+        <div class="col-6" id="div-ano">
+          <input class="form-control" formControlName="anoLancamento" type="text" placeholder="Ano de Lançamento"
+            required>
+        </div>
       </div>
-      <br><br><br>
+    </form>
 
-      <img width="150px" height="180px" src="/assets/clothes.svg" alt="" style="margin-left: -5%;">
+    <div class="row">
+      <img class="image" width="140px" height="160px" src="/assets/clothes.svg" alt="">
+    </div>
 
-      <div class="container mt-5">
-        <div class="action-buttons row">
-          <div class="right-buttons col-3">
-            <button type="button" (click)="onDelete(this)" class="btn btn-danger btn-sm">Excluir</button>
+    <div class="row mt-2">
+      <div class="action-buttons">
+        <div class="right-buttons col-3">
+          <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            Excluir
+          </button>
+          <!-- modal -->
+          <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5 text-danger" id="exampleModalLabel">Deseja excluir a Coleção?</h1>
+                  <button type="button" class="btn-close" style="width: 50px !important; min-width: 15px;"
+                    data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <label class="fw-bold"> Coleção: </label> {{ collection?.nome }}
+                  <br>A exclusão será permanente!
+                </div>
+                <div class="modal-footer ">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                  <button type="button" (click)="onDelete(this)" class="btn btn-danger btn-model"
+                    data-bs-dismiss="modal">Excluir</button>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="left-buttons offset-3 col-6">
-            <button type="button" (click)="onBack()" class="btn btn-secondary btn-sm">Cancelar</button>
-            <button type="button" (click)="onEdit()" class="btn btn-primary btn-sm">Salvar</button>
-          </div>
+          <!-- frim modal -->
+        </div>
+
+        <div class="left-buttons col-6">
+          <button type="button" (click)="onBack()" class="btn btn-secondary btn-collection">Cancelar</button> 
+          <button type="button" (click)="onEdit()" class="btn btn-primary btn-collection">Salvar</button>
         </div>
       </div>
     </div>
-  </form>
+
+  </div>
 </div>

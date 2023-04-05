@@ -1,7 +1,9 @@
-import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
+import { CollectionServicesService } from 'src/app/services/collection-services.service';
+import { ModelServicesService } from 'src/app/services/model-services.service';
 
 @Component({
   selector: 'app-edit-model',
@@ -23,19 +25,21 @@ export class EditModelComponent implements OnInit {
     });
 
     constructor(private _activated: ActivatedRoute,
-                private _api: HttpClient,
+                private _service: ModelServicesService,
+                private _serviceCollection: CollectionServicesService,
+                private _toast: ToastrService,
                 private _router: Router) { }
 
     ngOnInit(): void {
       this._activated.params.subscribe(params => {
         if(params['id']){
           this.id = params['id'];
-          this._api.get("http://localhost:3000/modelos/"+ this.id).subscribe((response: any) => {
+          this._service.getModelById(this.id).then((response: any) => {
             this.model = response;
             this.modelForm.patchValue(response);
           });
 
-          this._api.get("http://localhost:3000/colecoes/").subscribe((response: any) => {
+          this._serviceCollection.getCollections().then((response: any) => {
             this.collections = response;
           });
         }
@@ -46,15 +50,7 @@ export class EditModelComponent implements OnInit {
     }
 
     onEdit() {
-      this._api.put<any>("http://localhost:3000/modelos/"+ this.id, {
-          nome: this.modelForm.get("nome")?.value,
-          tipoModelo: this.modelForm.get("tipoModelo")?.value,
-          colecao: this.modelForm.get("colecao")?.value,
-          responsavel: this.modelForm.get("responsavel")?.value,
-          possuiBordado: this.modelForm.get("possuiBordado")?.value,
-          possuiEstampa: this.modelForm.get("possuiBordado")?.value
-        }).subscribe(data => console.log("retorno", data));
-
+      this._service.updateModel(this.modelForm.value).then((response) => this._toast.info("Modelo editado!"));
      this._router.navigate(['/private/models']);
     }
 
@@ -63,7 +59,7 @@ export class EditModelComponent implements OnInit {
     }
 
     onDelete(row: any){
-      this._api.delete<any>("http://localhost:3000/modelos/"+ row.collection.id).subscribe(data => console.log("retorno", data));
+      this._service.deleteModel(this.id).then((response) => this._toast.error("Modelo excluído!"));
       this._router.navigate(['/private/models']);
    }
 }

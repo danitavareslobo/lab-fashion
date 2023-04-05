@@ -1,24 +1,6 @@
 {
   "modelos": [
     {
-      "nome": "Modelo 1",
-      "tipoModelo": "Bíquini",
-      "colecao": "Coleção 5",
-      "responsavel": "Daniele Tavares",
-      "possuiBordado": false,
-      "possuiEstampa": false,
-      "id": 1
-    },
-    {
-      "nome": "Modelo 2",
-      "tipoModelo": "Saia",
-      "colecao": "Coleção 3",
-      "responsavel": "Daniele Tavares",
-      "possuiBordado": false,
-      "possuiEstampa": false,
-      "id": 2
-    },
-    {
       "nome": "Modelo 3",
       "tipoModelo": "Bermuda",
       "colecao": "Coleção 4",
@@ -44,15 +26,6 @@
       "possuiBordado": true,
       "possuiEstampa": true,
       "id": 5
-    },
-    {
-      "nome": "Modelo da Daniele",
-      "tipoModelo": "Bolsa",
-      "colecao": "Coleção 2",
-      "responsavel": "Diego",
-      "possuiBordado": false,
-      "possuiEstampa": false,
-      "id": 6
     }
   ],
   "colecoes": [
@@ -87,23 +60,58 @@
       "anoLancamento": 2025
     },
     {
-      "nome": "Coleção 5",
-      "responsavel": "Dani",
-      "estacao": "Versão 12",
-      "marca": "Audaces",
-      "modelos": 1,
-      "orcamento": 2500,
-      "anoLancamento": 2025,
-      "id": 5
-    },
-    {
+      "id": 6,
       "nome": "Daniele Verão 2",
       "responsavel": "Dani",
       "estacao": "Verão",
       "marca": "Tavares",
       "orcamento": "50000",
-      "anoLancamento": "2026",
-      "id": 6
+      "anoLancamento": "2026"
+    },
+    {
+      "id": 7,
+      "nome": "Teste",
+      "responsavel": "Teste",
+      "estacao": "Teste",
+      "marca": "Teste",
+      "orcamento": "1000",
+      "anoLancamento": "2020"
+    },
+    {
+      "id": 8,
+      "nome": "Teste 2",
+      "responsavel": "Teste 2",
+      "estacao": "Teste 2",
+      "marca": "Teste 2",
+      "orcamento": "999",
+      "anoLancamento": "2020"
+    },
+    {
+      "id": 9,
+      "nome": "Teste 3",
+      "responsavel": "Teste 3",
+      "estacao": "Teste 3",
+      "marca": "Teste 3",
+      "orcamento": "998",
+      "anoLancamento": "2020"
+    },
+    {
+      "id": 11,
+      "nome": "Teste 5",
+      "responsavel": "Teste 5",
+      "estacao": "Teste 5",
+      "marca": "Teste 5",
+      "orcamento": "996",
+      "anoLancamento": "2021"
+    },
+    {
+      "id": 12,
+      "nome": "Teste 6",
+      "responsavel": "Teste 6",
+      "estacao": "Teste 6",
+      "marca": "Teste 6",
+      "orcamento": "995",
+      "anoLancamento": "2022"
     }
   ]
 }

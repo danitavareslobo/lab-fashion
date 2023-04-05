@@ -13,9 +13,12 @@ export class MenuComponent {
     const URL: string = this._router.url;
     let bindingClass: string = "";
 
-    if(URL.includes(rota)) {
-      bindingClass = "active-link";
-    }
+    let rotaArray = rota.split(';');
+    rotaArray.forEach((item) =>{
+      if(URL.includes(item)) {
+        bindingClass = "active-link";
+      }
+    })
 
     return bindingClass;
   }

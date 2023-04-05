@@ -1,8 +1,8 @@
 <h5>Criar Coleção</h5>
 
-<div class="table">
+<div class="table mt-2">
 
-  <div class="container mt-5">
+  <div class="container mt-3">
     <form [formGroup]="collectionForm">
       <div class="row">
         <div class="col-6" id="div-name">
@@ -36,13 +36,12 @@
     </form>
 
     <div class="row">
-      <img class="image" width="150px" height="180px" src="/assets/clothes.svg" alt="">
+      <img class="image" width="140px" height="160px" src="/assets/clothes.svg" alt="">
     </div>
 
-
-    <div class="container mt-4 mb-5">
+    <div class="container mt-2">
       <div class="action-buttons row">
-        <div class="left-buttons offset-3 col-6">
+        <div class="left-buttons offset-6 col-6">
           <button type="button" class="btn btn-secondary btn-sm" (click)="onList()">Cancelar</button>
           <button type="button" class="btn btn-primary btn-sm" (click)="onCreate()">Salvar</button>
         </div>

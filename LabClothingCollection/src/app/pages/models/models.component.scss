@@ -4,12 +4,11 @@ span {
   font-weight: 600;
   font-size: 22px;
   color: #2C2C2C;
+  padding-left: 10%;
 }
 
 button {
-  font-size: 14px;
-  padding: 12px;
-  width: 70%;
+  min-width: 200px;
 }
 
 li {
@@ -34,10 +33,10 @@ td {
   position: absolute;
   width: 75%;
   top: 35%;
-  bottom: 10%;
-  left: 22.4%;
+  left: 21.5%;
   padding: 20px;
   border-radius: 15px;
+  overflow-y: auto;
 }
 
 .edit-model {

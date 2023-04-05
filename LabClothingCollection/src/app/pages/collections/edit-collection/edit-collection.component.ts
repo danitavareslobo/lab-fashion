@@ -2,6 +2,8 @@ import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
+import { CollectionServicesService } from 'src/app/services/collection-services.service';
 
 @Component({
   selector: 'app-edit-collection',
@@ -10,7 +12,8 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class EditCollectionComponent implements OnInit {
   constructor(private _activated: ActivatedRoute, 
-              private _api: HttpClient,
+              private _service: CollectionServicesService,
+              private _toast: ToastrService,
               private _router: Router) { }
 
   public id: any;
@@ -29,7 +32,7 @@ export class EditCollectionComponent implements OnInit {
     this._activated.params.subscribe(params => {
       if(params['id']) {
         this.id = params['id'];
-        this._api.get("http://localhost:3000/colecoes/"+ this.id).subscribe((response: any) => {
+        this._service.getCollectionById(this.id).then((response: any) => {
           this.collection = response;
           this.collectionForm.patchValue(response);
         });
@@ -41,16 +44,7 @@ export class EditCollectionComponent implements OnInit {
   }
 
   onEdit(){
-    this._api.put<any>("http://localhost:3000/colecoes/"+ this.id, {
-      nome: this.collectionForm.get("nome")?.value,
-      responsavel: this.collectionForm.get("responsavel")?.value,
-      estacao: this.collectionForm.get("estacao")?.value,
-      marca: this.collectionForm.get("marca")?.value,
-      modelos: this.collection.modelos,
-      orcamento: this.collectionForm.get("orcamento")?.value,
-      anoLancamento: this.collectionForm.get("anoLancamento")?.value
-    }).subscribe(data => console.log("retorno", data));
-
+    this._service.updateCollection(this.collectionForm.value).then((response) =>{ this._toast.info("Coleção Editada!")});
     this._router.navigate(['/private/collections']);
   }
 
@@ -59,7 +53,7 @@ export class EditCollectionComponent implements OnInit {
   }
 
   onDelete(row: any){
-     this._api.delete<any>("http://localhost:3000/colecoes/"+ row.collection.id).subscribe(data => console.log("retorno", data));
+     this._service.deleteCollection(row.collection.id).then((response) => this._toast.error("Coleção Excluída!"));
      this._router.navigate(['/private/collections']);
   }
 }

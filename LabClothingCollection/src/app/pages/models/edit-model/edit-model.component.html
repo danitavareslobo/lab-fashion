@@ -1,8 +1,8 @@
 <h5>Editar Modelo</h5>
 
-<div class="table">
+<div class="table mt-2">
   <form [formGroup]="modelForm">
-    <div class="container mt-5">
+    <div class="container mt-3">
       <div class="row">
         <input type="hidden" formControlName="id" name="id">
         <div class="col-6" id="div-name">
@@ -43,7 +43,7 @@
       </div>
       <br>
       <div class="row">
-        <div class="col-6" id="div-bord">
+        <div class="col-6" id="div-bord" style="padding-left: 4%;">
           <label class="form-check-label" for="bordadoRadio">
             Possui bordado?
           </label>
@@ -60,7 +60,7 @@
             </label>
           </div>
         </div>
-        <div class="col-6" id="div-estamp">
+        <div class="col-6" id="div-estamp" style="padding-left: 4%;">
           <label class="form-check-label" for="estampaRadio">
             Possui estampa?
           </label>
@@ -79,13 +79,37 @@
         </div>
       </div>
     </div>
-    <br><br><br><br>
+
     <div class="container mt-5">
       <div class="action-buttons row">
         <div class="right-buttons col-3">
-          <button type="button" (click)="onDelete(this)" class="btn btn-danger btn-model">Excluir</button>
+
+          <button type="button" class="btn btn-danger col-6" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            Excluir
+          </button>
+          <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5 text-danger" id="exampleModalLabel">Deseja excluir o Modelo?</h1>
+                  <button type="button" class="btn-close" style="width: 50px !important; min-width: 15px;"
+                    data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <label class="fw-bold"> Modelo: </label> {{ model.nome }}
+                  <br>A exclusão será permanente!
+                </div>
+                <div class="modal-footer ">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                  <button type="button" (click)="onDelete(this)" class="btn btn-danger btn-collection" data-bs-dismiss="modal">Excluir</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          
         </div>
-        <div class="left-buttons offset-3 col-6">
+        <div class="left-buttons offset-6 col-6">
           <button type="button" (click)="onBack()" class="btn btn-secondary btn-model">Cancelar</button>
           <button type="button" (click)="onEdit()" class="btn btn-primary btn-model">Salvar</button>
         </div>

@@ -3,27 +3,26 @@ h5 {
   font-style: normal;
   font-weight: 600;
   font-size: 24px;
-  padding-left: 5%;
-  margin-top: -3%;
+  margin-top: -2%;
+  padding-left: 6%;
+}
+
+.image{
+  margin: 0 auto;
 }
 
 .table {
   background-color: #FFF;
   position: absolute;
   width: 75%;
-  top: 20%;
-  bottom: 5%;
-  left: 22.4%;
-  padding: 20px;
+  top: 25%;
+  left: 22%;
   border-radius: 15px;
+  padding: 10px;
 }
-
-
 
 input {
   color: #B4B6C1;
-  font-size: 12px;
-  width: 75%;
 }
 
 ::placeholder {
@@ -34,12 +33,13 @@ input {
   display: flex;
   flex-direction: row;
   width: 100%;
+  margin-left: 5%;
 
   .right-buttons {
-    margin-left: 0;
+    margin-left: 0 auto;
 
     button {
-      min-width: 200px;
+      min-width: 180px;
     }
   }
 
@@ -47,13 +47,11 @@ input {
     margin-left: auto;
 
     button {
-      min-width: 200px;
+      min-width: 180px;
     }
   }
+}
 
-  .left-buttons:first-child {
-    button{
-      margin-right: 50px;
-    }
-  }
+.btn-collection {
+  margin-right: 15px;
 }

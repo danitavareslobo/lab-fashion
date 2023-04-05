@@ -1,8 +1,8 @@
 <div class="container card-container">
   <div class="row">
-    <app-cards class="col-4" titulo="Coleções" [valor]="valor1"></app-cards>
-    <app-cards class="col-4" titulo="Modelos" [valor]="valor2"></app-cards>
-    <app-cards class="col-4" titulo="Orçamentos Médio (R$)" [valor]="valor3" [info]="true"></app-cards>
+    <app-cards class="col-4" titulo="Coleções" [valor]="totalColecoes"></app-cards>
+    <app-cards class="col-4" titulo="Modelos" [valor]="totalModelos"></app-cards>
+    <app-cards class="col-4" titulo="Orçamentos Médio (R$)" [valor]="media" [realMoney]="true" [info]="true"></app-cards>
   </div>
 </div>
 <div class="container mt-4 mb-4">
@@ -16,7 +16,7 @@
               <th scope="col">Coleção</th>
               <th scope="col">Responsável</th>
               <th scope="col">Modelos</th>
-              <th scope="col" class="text-end">Orçamento</th>
+              <th scope="col" >Orçamento</th>
             </tr>
           </thead>
           <tbody>
@@ -24,7 +24,7 @@
               <td scope="row">{{ collection['id'] }}</td>
               <td>{{ collection['responsavel'] }}</td>
               <td>{{ collection['nome'] }}</td>
-              <td class="text-end">{{ collection['orcamento'] }}</td>
+              <td >{{ collection['orcamento'] }}</td>
             </tr>
           </tbody>
         </table>

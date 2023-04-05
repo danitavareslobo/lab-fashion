@@ -2,6 +2,8 @@ import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
+import { CollectionServicesService } from 'src/app/services/collection-services.service';
 
 @Component({
   selector: 'app-register-collection',
@@ -19,18 +21,11 @@ export class RegisterCollectionComponent {
     anoLancamento: new FormControl("", [Validators.required, Validators.minLength(4)])
   });
   constructor(private _router: Router,
-              private _api: HttpClient) {}
+              private _service: CollectionServicesService,
+              private _toast: ToastrService) {}
 
   onCreate(){
-    this._api.post<any>("http://localhost:3000/colecoes/", {
-      nome: this.collectionForm.get("nome")?.value,
-      responsavel: this.collectionForm.get("responsavel")?.value,
-      estacao: this.collectionForm.get("estacao")?.value,
-      marca: this.collectionForm.get("marca")?.value,
-      orcamento: this.collectionForm.get("orcamento")?.value,
-      anoLancamento: this.collectionForm.get("anoLancamento")?.value
-    }).subscribe(data => console.log("retorno", data));
-
+    this._service.createCollection(this.collectionForm.value).then((response) => this._toast.info("Coleção criada!"));
     this._router.navigate(['/private/collections']);
   }
 

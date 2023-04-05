@@ -1,6 +1,6 @@
-import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { ModelServicesService } from 'src/app/services/model-services.service';
 
 @Component({
   selector: 'app-models',
@@ -11,11 +11,11 @@ export class ModelsComponent implements OnInit {
   public models: any[] = [];
 
   constructor(private _router: Router,
-              private _api: HttpClient) {
+              private _service: ModelServicesService) {
 
   }
   ngOnInit(): void {
-    this._api.get("http://localhost:3000/modelos").subscribe((response: any) => {
+    this._service.getModels().then((response: any) => {
       this.models = response || [];
     });
   }

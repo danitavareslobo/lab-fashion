@@ -11,15 +11,14 @@
     </li>
     <li>
       <a routerLink="/private/collections" class="nav-link" class="nav-link"
-        [ngClass]="bindingRouters('private/collections')">Coleções</a><br>
+        [ngClass]="bindingRouters('private/collections;private/edit-collection/;private/register-collection')">Coleções</a><br>
     </li>
     <li>
       <a routerLink="/private/models" class="nav-link" class="nav-link"
-        [ngClass]="bindingRouters('private/models')">Modelos</a><br>
+        [ngClass]="bindingRouters('private/models;private/edit-model/;private/register-model')">Modelos</a><br>
     </li>
     <li>
-      <a routerLink="/private/help" class="nav-link" class="nav-link"
-        [ngClass]="bindingRouters('private/help')">Obter
+      <a routerLink="/private/help" class="nav-link" class="nav-link" [ngClass]="bindingRouters('private/help')">Obter
         Ajuda</a><br>
     </li>
     <li>
@@ -27,3 +26,5 @@
         [ngClass]="bindingRouters('private/coments')">Comentários</a>
     </li>
   </ul>
+
+  

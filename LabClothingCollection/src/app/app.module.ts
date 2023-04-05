@@ -5,8 +5,6 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './pages/login/login.component';
-import { LogoutComponent } from './pages/logout/logout.component';
-import { NotFoundComponent } from './pages/not-found/not-found.component';
 import { HomeComponent } from './pages/home/home.component';
 import { CollectionsComponent } from './pages/collections/collections.component';
 import { ResetPasswordComponent } from './pages/reset-password/reset-password.component';
@@ -25,13 +23,18 @@ import { EditCollectionComponent } from './pages/collections/edit-collection/edi
 import { EditModelComponent } from './pages/models/edit-model/edit-model.component';
 import { RegisterModelComponent } from './pages/models/register-model/register-model.component';
 import { LoginGuard } from './guards/login/login.guard';
+import { ToastrModule } from 'ngx-toastr';
+import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
+import {LOCALE_ID, DEFAULT_CURRENCY_CODE} from '@angular/core';
+import localePt from '@angular/common/locales/pt';
+import {registerLocaleData} from '@angular/common';
+
+registerLocaleData(localePt, 'pt');
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    LogoutComponent,
-    NotFoundComponent,
     HomeComponent,
     CollectionsComponent,
     ResetPasswordComponent,
@@ -47,8 +50,7 @@ import { LoginGuard } from './guards/login/login.guard';
     RegisterCollectionComponent,
     EditCollectionComponent,
     EditModelComponent,
-    RegisterModelComponent,
-    
+    RegisterModelComponent
   ],
   imports: [
     BrowserModule,
@@ -57,8 +59,20 @@ import { LoginGuard } from './guards/login/login.guard';
     FormsModule,
     ReactiveFormsModule,
     NgbModule,
+    BrowserAnimationsModule,
+    ToastrModule.forRoot()
   ],
-  providers: [LoginGuard],
+  providers: [
+    LoginGuard,
+    {
+      provide: LOCALE_ID,
+      useValue: 'pt'
+    },
+    {
+      provide:  DEFAULT_CURRENCY_CODE,
+      useValue: 'BRL'
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

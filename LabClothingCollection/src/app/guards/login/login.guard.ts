@@ -9,9 +9,7 @@ export class LoginGuard implements CanActivate {
         return new Promise(
             async (resolve) => {
                 const localStorageItem = localStorage.getItem("isLogged");
-
-                console.log("Guard: ", localStorageItem)
-                
+                                
                 if(!localStorageItem) {
                   this._router.navigate(["/login"]);
 

@@ -2,27 +2,28 @@
   background-color: #FFF;
   display: flex;
   flex-direction: row;
-  min-height: 210px;
+  min-height: 175px;
   justify-content: space-between;
   border-radius: 16px;
-  padding: 20px 10px 5px 10px;
+  padding-top: 3%;
+  padding-left: 3%;
 }
 
-h5 {
+.card-title {
   font-family: Inter;
   font-style: normal;
   font-weight: 600;
-  font-size: 14px;
+  font-size: 18px;
   color: #595959;
-  
 }
 
 .card-total {
   font-family: 'Inter';
   font-style: normal; 
   font-weight: 600;
-  font-size: 20px; 
+  font-size: 24px; 
   color: #2C2C2C;
+  margin-top: -5%;
 }
 
 

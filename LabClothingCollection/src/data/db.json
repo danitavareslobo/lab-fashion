@@ -40,16 +40,6 @@
       "anoLancamento": 2025
     },
     {
-      "id": 3,
-      "nome": "Coleção 3",
-      "responsavel": "Daniele Tavares",
-      "estacao": "Inverno",
-      "marca": "Audaces",
-      "modelos": 2,
-      "orcamento": 1500,
-      "anoLancamento": 2025
-    },
-    {
       "id": 4,
       "nome": "Coleção 4",
       "responsavel": "Daniele Tavares",
@@ -58,33 +48,6 @@
       "modelos": 2,
       "orcamento": 500,
       "anoLancamento": 2025
-    },
-    {
-      "id": 6,
-      "nome": "Daniele Verão 2",
-      "responsavel": "Dani",
-      "estacao": "Verão",
-      "marca": "Tavares",
-      "orcamento": "50000",
-      "anoLancamento": "2026"
-    },
-    {
-      "id": 7,
-      "nome": "Teste",
-      "responsavel": "Teste",
-      "estacao": "Teste",
-      "marca": "Teste",
-      "orcamento": "1000",
-      "anoLancamento": "2020"
-    },
-    {
-      "id": 8,
-      "nome": "Teste 2",
-      "responsavel": "Teste 2",
-      "estacao": "Teste 2",
-      "marca": "Teste 2",
-      "orcamento": "999",
-      "anoLancamento": "2020"
     },
     {
       "id": 9,
@@ -112,6 +75,15 @@
       "marca": "Teste 6",
       "orcamento": "995",
       "anoLancamento": "2022"
+    },
+    {
+      "id": 13,
+      "nome": "Test 10 ",
+      "responsavel": "Test 10",
+      "estacao": "Test 10",
+      "marca": "Test 10",
+      "orcamento": "2",
+      "anoLancamento": "2023"
     }
   ]
 }

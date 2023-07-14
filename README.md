@@ -1,6 +1,6 @@
-<h1  align="center"> Projeto LabFashion Módulo 1 DEVinAudaces </h1>
+<h1  align="center"> Projeto LabFashion</h1>
 
-![readme](https://user-images.githubusercontent.com/107322230/230194144-ebff7e29-73e8-46a1-940d-d5678424d4ca.jpg)
+<img src="./src/assets/danitl-logo.png" width="300" />
 
 <br>
  
@@ -55,6 +55,11 @@ https://user-images.githubusercontent.com/107322230/230229724-2785f6aa-e40a-402a
 https://user-images.githubusercontent.com/107322230/230229753-ada4c409-af43-4569-b268-241a34f8dac8.mp4
 
 
+<br>
+
+## Projeto Publicado
+
+Vc pode acessar a Landing Page clicando aqui: :point_right: www.lab-clothing.danitavares.dev
 
 <br>
 

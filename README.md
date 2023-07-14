@@ -1,7 +1,9 @@
 <h1  align="center"> Projeto LabFashion</h1>
+<div align="center">
 
-<img src="./src/assets/danitl-logo.png" width="300" />
-
+<img src="https://github.com/danitavareslobo/lab-fashion/assets/107322230/7a43a195-e4ca-4f7d-b05c-2566e1aad548" width= 300>
+ 
+</div>
 <br>
  
  

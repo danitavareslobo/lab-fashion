@@ -17,7 +17,7 @@ Projeto desenvolvido para o Módulo de Front-End do curso DEVinHouse - Audaces d
 ## Status do Projeto
 
  Projeto entregue  :heavy_check_mark:
- <br>Aguardando correção para aplicar melhorias
+ <br>Analisando para aplicar melhorias
 
 <br>
  

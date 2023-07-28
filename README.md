@@ -1,12 +1,11 @@
 <h1  align="center"> Projeto Front-End LabFashion</h1>
 <div align="center">
 
-<img src="https://github.com/danitavareslobo/lab-fashion/assets/107322230/7a43a195-e4ca-4f7d-b05c-2566e1aad548" width= 300>
+<img src="https://github.com/danitavareslobo/lab-fashion/assets/107322230/c767b6f3-a345-45d9-af20-a6b3504f06d8" width= 300>
  
 </div>
 <br>
- 
- 
+
 ## Descrição do Projeto
 
 Projeto desenvolvido para o Módulo de Front-End do curso DEVinHouse - Audaces do SENAI-SC. O Lab Clothing Collection é um software audacioso para gestão de coleções de moda no setor de vestuário desenvolvido para a LABFashion LTDA.
